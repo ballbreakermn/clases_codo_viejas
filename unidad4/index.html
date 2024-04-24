@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ejemplo DOM con querySelectorAll</title>
+</head>
+
+<body>
+  <h1 id="miTitulo" class="principal">Título Original</h1>
+  <h3 class="principal">Subtitulo de la pagina</h3>
+  <input id="nuevoTitulo" type="text" placeholder="Ingrese un nuevo título">
+  <button id="cambiarTitulo">Cambiar Título</button>
+  <!-- crear contenido -->
+  <div class="contenido">
+
+  </div>
+  <p class="parrafo">parrafo creado desde Html</p>
+
+
+
+
+  
+  <script>
+    // Obtener el elemento del título, el input y el botón
+    const titulo = document.getElementById('miTitulo');
+    const inputTitulo = document.getElementById('nuevoTitulo');
+    const boton = document.getElementById('cambiarTitulo');
+
+    // Agregar un manejador de eventos al botón
+    boton.addEventListener('click', function () {
+      // Obtener el nuevo título ingresado en el input
+      const nuevoTitulo = inputTitulo.value;
+
+      // Cambiar el contenido del elemento título con el nuevo título
+      titulo.innerHTML = nuevoTitulo;
+
+      // Limpiar el contenido del input
+      inputTitulo.value = '';
+    });
+  </script>
+  <script src="dom.js"></script>
+</body>
+
+</html>
